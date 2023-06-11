@@ -18,3 +18,6 @@ Put url of the nong file in url box, or if the Youtube Link checkbox is chosen t
 ## _Troubleshooting_
 Under construction... Come back later :)  
 For now just report the issue and I will see how I can help.
+
+## _Contributing_
+Just make a fork and add your changes! I would love any help that I can get.
