@@ -6,13 +6,9 @@ This is barebones right now, as I made it in less than 1 hour, but expect more u
 
 ## Linux
 Download source code and run.  
-You will need to supply an alternate Geometry Dash AppData folder.  
-This is the platform I use (as an arch user) so this will be the most tested version
+You will need to supply an alternate Geometry Dash AppData folder. This is the platform I use (as an arch user) so this will be the most tested version
 ## Windows
-I do not own a Windows computer, so all testing will be done via  
-a friend's computer. Expect more bugs.  
-You can find executable in the releases tab or can download and run  
-the source for a more updated version.
+I do not own a Windows computer, so all testing will be done via a friend's computer. Expect more bugs. You can find executable in the releases tab or can download and run the source for a more updated version.
 ## MacOS
 I do not have any access to an Apple computer, so all support is theoretical.  
 While it _should_ work on MacOS with an alternate Geometry Dash AppData folder  
