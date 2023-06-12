@@ -22,7 +22,7 @@ def download_song(platform, output_folder, n_id, url):
     else:
         return False
 
-    with open(os.path.join(output_folder, f"{n_id}.mp3"), "wb") as f:
+    with open(os.path.join(output_folder, f"/{n_id}.mp3"), "wb") as f:
         f.write(audio)
 
     return True
