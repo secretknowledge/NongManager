@@ -5,9 +5,8 @@ Handles nongs (not on newgrounds songs)
 in GeometryDash
 Supports MacOS, Linux, and Windows
 """
-import manager.nongutils as nongutils
-import window.ui as ui
+import manager.ui as gui
 
 if __name__ == "__main__":
-    app = ui.App(nongutils.download_song)
+    app = gui.App()
     app.mainloop()
