@@ -5,8 +5,15 @@ Handles nongs (not on newgrounds songs)
 in GeometryDash
 Supports MacOS, Linux, and Windows
 """
-import manager.ui as gui
+import ui
+import os
+import setup
+
 
 if __name__ == "__main__":
-    app = gui.App()
-    app.mainloop()
+    if not os.path.exists(os.path.join(os.getcwd(), "APPDATA.txt")):
+        app = setup.Setup()
+        app.mainloop()
+    else:
+        app = ui.App()
+        app.mainloop()
