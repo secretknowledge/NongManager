@@ -16,11 +16,4 @@ class FileManager:
     the NongManager application
     """
     def __init__(self, configuration):
-        self.configuration = configuration  # ConfigurationClass
-
-
-class Setup:
-    """
-    Handles creating necessary files when NongManager is run
-    for the first time
-    """
+        self.configuration = configuration
