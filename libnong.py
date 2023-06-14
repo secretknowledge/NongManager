@@ -1,4 +1,4 @@
-from bases import FileManager
+from libbases import FileManager
 
 
 class NoNGInstaller(FileManager):

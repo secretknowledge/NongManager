@@ -35,8 +35,3 @@ class Setup(customtkinter.CTk):
         with open(os.path.join(os.getcwd(), "APPDATA.txt"), "w") as f:
             f.write(self.appdata.get())
         self.destroy()
-
-
-if __name__ == '__main__':
-    setup = Setup()
-    setup.mainloop()

@@ -1,7 +1,17 @@
 import customtkinter
+from easysettings import EasySettings
+import os
 
 customtkinter.set_appearance_mode("Dark")
 customtkinter.set_default_color_theme("green")
+
+
+def get_appdata():
+    with open(os.path.join(os.getcwd(), "APPDATA.txt")) as f:
+        return f.read()
+
+
+settings = EasySettings(os.path.join(get_appdata(), "NONGMANAGER.conf"))
 
 
 class InstallMenu(customtkinter.CTkFrame):
@@ -27,17 +37,26 @@ class InstallMenu(customtkinter.CTkFrame):
         self.local_file_button.pack(pady=(10,0))
 
 
+class NoNGMenu(customtkinter.CTkScrollableFrame):
+    def __init__(self, master, **kwargs):
+        super().__init__(master, **kwargs)
+
+
 class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
         self.geometry(f"{800}x{500}")
         self.resizable(False, False)
+        self.title("NongManager")
 
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(0, weight=1)
 
         self.install_menu = InstallMenu(self)
+        self.nongmenu = NoNGMenu(self)
+
         self.install_menu.grid(row=0, column=1, padx=20, pady=20, sticky="nsew")
+        self.nongmenu.grid(row=0, column=0, padx=20, pady=20, sticky="nsew")
 
 
 if __name__ == '__main__':
