@@ -6,7 +6,7 @@ Heavy development is underway, so expect bugs, crashes, and strange errors! I am
 
 ## Linux
 Download source code and run.  
-You will need to supply an alternate Geometry Dash AppData folder. This is the platform I use (as an arch user) so this will be the most tested version
+You will need to supply an alternate Geometry Dash AppData folder. This is the platform I use (as an arch user) so this will be the most tested version.
 ## Windows
 I do not own a Windows computer, so all testing will be done via a friend's computer. Expect more bugs. You can find executable in the releases tab or can download and run the source for a more updated version.
 ## MacOS
