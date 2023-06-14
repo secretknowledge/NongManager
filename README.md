@@ -1,6 +1,6 @@
 # NongManager
 ## A simple nong installer for Linux, Windows, and MacOS
-This is barebones right now, as I made it in less than 1 hour, but expect more updates soon!
+Heavy development is underway, so expect bugs, crashes, and strange errors! I am hoping to get out a stable release soon!
 
 ## _Installation:_
 
