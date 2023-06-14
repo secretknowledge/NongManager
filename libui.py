@@ -21,7 +21,7 @@ class InstallMenu(customtkinter.CTkFrame):
         self.desc = customtkinter.CTkLabel(self, text="Add NoNG from...", width=200)
         self.separator = customtkinter.CTkLabel(self, text="_______________________")
 
-        self.newgrounds_button = customtkinter.CTkButton(self, text="Newgrounds")
+        self.newgrounds_button = customtkinter.CTkButton(self, text="NewGrounds")
         self.songfilehub_button = customtkinter.CTkButton(self, text="SongFileHub")
         self.remote_url_button = customtkinter.CTkButton(self, text="Remote URL")
         self.youtube_url_button = customtkinter.CTkButton(self, text="Youtube URL")
