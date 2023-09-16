@@ -2,8 +2,8 @@ from libbases import FileManager
 
 
 class NoNGInstaller(FileManager):
-    def __init__(self, configuration):
-        super().__init__(configuration)
+    def __init__(self, appdata_path):
+        super().__init__(appdata_path)
         # load config vars and stuff
 
     def install_newgrounds(self):

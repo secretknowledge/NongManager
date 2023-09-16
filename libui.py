@@ -1,14 +1,10 @@
 import customtkinter
 from easysettings import EasySettings
 import os
+from libbases import *
 
 customtkinter.set_appearance_mode("Dark")
 customtkinter.set_default_color_theme("green")
-
-
-def get_appdata():
-    with open(os.path.join(os.getcwd(), "APPDATA.txt")) as f:
-        return f.read()
 
 
 settings = EasySettings(os.path.join(get_appdata(), "NONGMANAGER.conf"))

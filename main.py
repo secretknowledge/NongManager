@@ -5,7 +5,6 @@ Handles nongs (not on newgrounds songs)
 in GeometryDash
 Supports MacOS, Linux, and Windows
 """
-import libui
 import os
 import setup
 
@@ -15,5 +14,7 @@ if __name__ == "__main__":
         app = setup.Setup()
         app.mainloop()
     else:
+        import libui
+
         app = libui.App()
         app.mainloop()
