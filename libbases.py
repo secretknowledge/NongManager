@@ -1,6 +1,7 @@
 from easysettings import EasySettings
 import os
-
+import newgroundsdl
+import requests
 
 def get_appdata():
     with open(os.path.join(os.getcwd(), "APPDATA.txt")) as f:
@@ -20,11 +21,20 @@ class FileManager:
     def install_nong(self, data, id_):
         out = os.path.join(self.appdata_path, id_)
         old = os.path.join(self.appdata_path, f"{id_}_old.mp3")
-        if not os.path.exists(old):
+        if not self.settings.has_option(id_):
             self.settings.set(id_, "1")  # 1=NoNG is in use, 0=NoNG is not active
             self.settings.save()
 
-            os.rename(out, old)
+            try:
+                os.rename(out, old)
+            except FileNotFoundError:  # Original song mp3 does not exist, lets download it
+                uri = newgroundsdl.getSongFileURI(f"https://www.newgrounds.com/audio/listen/{id_}")
+                data = requests.get(uri)
+
+                with open(out, "wb") as f:
+                    f.write(data)
+
+                os.rename(out, old)
 
             with open(out, "wb") as f:
                 f.write(data)
