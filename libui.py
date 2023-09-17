@@ -20,7 +20,7 @@ class InstallMenu(customtkinter.CTkFrame):
         self.newgrounds_button = customtkinter.CTkButton(self, text="NewGrounds")
         self.songfilehub_button = customtkinter.CTkButton(self, text="SongFileHub")
         self.remote_url_button = customtkinter.CTkButton(self, text="Remote URL")
-        self.youtube_url_button = customtkinter.CTkButton(self, text="Youtube URL")
+        self.youtube_url_button = customtkinter.CTkButton(self, text="YouTube URL")
         self.local_file_button = customtkinter.CTkButton(self, text="Local File")
 
         self.desc.pack(pady=(25,0))

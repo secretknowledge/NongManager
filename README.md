@@ -1,4 +1,4 @@
-# YANM (Yet Another Nong manager)
+# YANM (Yet Another Nong Manager)
 ## A simple nong installer for Linux, Windows, and MacOS
 Heavy development is underway, so expect bugs, crashes, and strange errors! I am hoping to get out a stable release soon!
 
