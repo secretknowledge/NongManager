@@ -52,6 +52,9 @@ class NoNGInstaller(FileManager):
             return False  # Something went wrong
 
     def install_youtube_url(self, id_, url):
+        out = os.path.join(self.appdata_path, id_)
+        old = os.path.join(self.appdata_path, f"{id_}_old.mp3")
+        
         try:
             if self.settings.has_option(id_):
                 return False  # Exists
@@ -64,6 +67,17 @@ class NoNGInstaller(FileManager):
                         best_stream = stream
                 else:
                     best_stream = stream
+
+            try:
+                os.rename(out, old)
+            except FileNotFoundError:  # Original song mp3 does not exist, lets download it
+                uri = newgroundsdl.getSongFileURI(f"https://www.newgrounds.com/audio/listen/{id_}")
+                data = requests.get(uri)
+                
+                with open(out, "wb") as f:
+                    f.write(data)
+
+                os.rename(out, old)
 
             best_stream.download(output_path=os.path.join(self.appdata_path, id_))
             self.settings.set(id_, "1")  # 1=NoNG is in use, 0=NoNG is not active
