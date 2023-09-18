@@ -1,4 +1,4 @@
-import os.path
+import os
 
 from libbases import FileManager
 import newgroundsdl
@@ -15,7 +15,7 @@ class NoNGInstaller(FileManager):
         try:
             uri = newgroundsdl.getSongFileURI(f"https://www.newgrounds.com/audio/listen/{id_}")
             data = requests.get(uri)
-            installed =self.install_nong(data, id_)
+            installed = self.install_nong(data, id_)
 
             if installed is False:
                 return False

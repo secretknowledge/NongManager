@@ -3,6 +3,7 @@ import os
 import newgroundsdl
 import requests
 
+
 def get_appdata():
     with open(os.path.join(os.getcwd(), "APPDATA.txt")) as f:
         return f.read()
